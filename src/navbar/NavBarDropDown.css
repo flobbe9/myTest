@@ -1,0 +1,9 @@
+.NavBarDropDown {
+    border: 1px solid blue;
+    width: fit-content;
+    display: inline;
+}
+
+.NavBarDropDown-element {
+
+}
