@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import "./NavBarDropDown.css";
-import Test from "../test/Test.tsx";
-import ReactPage from "../reactPage/ReactPage.tsx";
-import { changeColorOnMouseOver } from "./NavBarEvents.tsx";
+
+const navBarDropDownElements = document.getElementsByClassName("NavBarDropDown-element");
 
 export default function NavBarDropDown(props) {
     // links change color on hover
-    changeColorOnMouseOver(document.getElementsByClassName("NavBarDropDown-element"), "bisquit", "black");
+    // useEffect(() => 
+        // changeColorOnMouseOver(navBarDropDownElements, "grey", "black"));
 
     return (
         <div className="NavBarDropDown">

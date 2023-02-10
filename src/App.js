@@ -2,23 +2,32 @@ import './App.css';
 import NavBar from './navbar/NavBar.tsx';
 import NavBarDropDown from './navbar/NavBarDropDown.tsx';
 
+
+const navBarDropDown = document.getElementsByClassName("NavBarDropDownn");
+const navBar = document.getElementsByClassName("NavBarr");
+
+
 function App() {
+
     return (
-    <div className="App">
-		<header>
-			<NavBar/>
-			<NavBarDropDown/>
-		</header>
+		<div className="App">
+			<header>
+				<NavBar className="NavBarr" />
+				<NavBarDropDown className="NavBarDropDownn" />
+				<NavBarDropDown className="NavBarDropDownn" />
+				<NavBarDropDown className="NavBarDropDownn" />
+			</header>
 
-		<body className="Body">
-			<h1>Body</h1>
-		</body>
+			<body className="Body">
+				<h1>Body</h1>
+			</body>
 
-		<footer>
-			Footer
-		</footer>
-    </div>
-  );
+			<footer>
+				Footer
+			</footer>
+		</div>
+  	);
 }
+
 
 export default App;

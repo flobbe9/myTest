@@ -1,38 +1,37 @@
+export function setBackgroundColorOfClass(classElementsEvent: HTMLCollectionOf<Element>, 
+                                          event: string, 
+                                          backgroundColor: string,
+                                          classElementsEffect?: HTMLCollectionOf<Element>) {
 
+    Array.from(classElementsEvent).forEach((classElementEvent, i) => {
+        classElementEvent.addEventListener(event, () => {
+            // case: use effect on different element
+            
+            if (classElementsEffect) {
+                (classElementsEffect[i] as HTMLElement).style.backgroundColor = backgroundColor;
 
-export function changeBackgroundColorOnMouseOver(navBarElements: HTMLCollectionOf<Element>, colorOver: string, colorOut: string): void {
-    for (let element of navBarElements) {
-        if (element instanceof HTMLElement) {
-            // mouseover
-            element.onmouseover = () => {
-                if (element instanceof HTMLElement)
-                    element.style.backgroundColor = colorOver;
-            }
-
-            // mouseout
-            element.onmouseout = () => {
-                if (element instanceof HTMLElement)
-                    element.style.backgroundColor = colorOut;
-            }
+            // case: use effect on same element
+            } else 
+                (classElementEvent as HTMLElement).style.backgroundColor = backgroundColor;
         }
-    }
+    )})
 }
 
 
-export function changeColorOnMouseOver(navBarElements: HTMLCollectionOf<Element>, colorOver: string, colorOut: string): void {
-    for (let element of navBarElements) {
-        if (element instanceof HTMLElement) {
-            // mouseover
-            element.onmouseover = () => {
-                if (element instanceof HTMLElement)
-                    element.style.color = colorOver;
-            }
+export function setDisplayOfClass(classElementsEvent: HTMLCollectionOf<Element>, 
+                                  event: string, 
+                                  display: string,
+                                  classElementsEffect?: HTMLCollectionOf<Element>) {
+    
+    Array.from(classElementsEvent).forEach((classElementEvent, i) => {
+        classElementEvent.addEventListener(event, () => {
+            // case: use effect on different element
+            if (classElementsEffect) {
+                (classElementsEffect[i] as HTMLElement).style.display = display;
 
-            // mouseout
-            element.onmouseout = () => {
-                if (element instanceof HTMLElement)
-                    element.style.color = colorOut;
-            }
-        }
-    }
+            // case: use effect on same element
+            } else 
+                (classElementEvent as HTMLElement).style.display = display;
+        })
+    })
 }
