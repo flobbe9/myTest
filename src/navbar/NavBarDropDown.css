@@ -1,9 +1,21 @@
 .NavBarDropDown {
     border: 1px solid blue;
+    background-color: white;
+    border-radius: 4px;
+    padding: 5px;
     width: fit-content;
     display: inline;
+    position: absolute;
+    left: 337px;
+    top: 75px;
 }
 
 .NavBarDropDown-element {
-
+    border: 1px solid blue;
+    color: black;
+    display: block;
+    padding-left: 23px;
+    padding-right: 23px;
+    text-align: left;
+    text-decoration: none;
 }
