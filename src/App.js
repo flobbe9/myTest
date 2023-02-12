@@ -1,6 +1,5 @@
 import './App.css';
 import NavBar from './navbar/NavBar.tsx';
-import NavBarDropDown from './navbar/NavBarDropDown.tsx';
 
 
 const navBarDropDown = document.getElementsByClassName("NavBarDropDownn");
@@ -13,9 +12,9 @@ function App() {
 		<div className="App">
 			<header>
 				<NavBar className="NavBarr" />
+				{/* <NavBarDropDown className="NavBarDropDownn" />
 				<NavBarDropDown className="NavBarDropDownn" />
-				<NavBarDropDown className="NavBarDropDownn" />
-				<NavBarDropDown className="NavBarDropDownn" />
+				<NavBarDropDown className="NavBarDropDownn" /> */}
 			</header>
 
 			<body className="Body">

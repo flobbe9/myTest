@@ -1,30 +1,30 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import "./NavBarDropDown.css";
+import "./DropDown.css";
 
-const navBarDropDownElements = document.getElementsByClassName("NavBarDropDown-element");
+const navBarDropDownElements = document.getElementsByClassName("DropDown-element");
 
-export default function NavBarDropDown(props) {
+export default function DropDown(props) {
     // links change color on hover
     // useEffect(() => 
         // changeColorOnMouseOver(navBarDropDownElements, "grey", "black"));
 
     return (
-        <div className="NavBarDropDown">
+        <div className="DropDown-container">
             <Router>
-                <Link className="NavBarDropDown-element" to="/">
+                <Link className="DropDown-item" to="/">
                     Home
                 </Link>
 
-                <Link className="NavBarDropDown-element" to="/jobs">
+                <Link className="DropDown-item" to="/jobs">
                     Jobs
                 </Link>
 
-                <Link className="NavBarDropDown-element" to="/contact">
+                <Link className="DropDown-item" to="/contact">
                     Contact
                 </Link>
 
-                <Link  className="NavBarDropDown-element" to="/reactPage">
+                <Link  className="DropDown-item" to="/reactPage">
                     React
                 </Link>
 

@@ -3,18 +3,29 @@
     background-color: bisque;
 }
 
-.NavBar-elements {
+.NavBar-container {
     border: 1px solid blue;
     text-align: left;
     font-size: 25px;
+    margin-bottom: 0px;
 }
 
-.NavBar-element {
+.NavBar-item {
+    display: inline-flex;
     border: 3px solid white;
     border-radius: 4px;
-    /* color:  #61dafb; */
-    /* box-shadow: 0px 0px 2px 1px grey; */
-    margin: 10px;
+    margin: 0px 5px;
     padding: 10px 25px;
-    display: inline;
+}
+
+.NavBar-DropDown-container {
+    border: 1px solid blue;
+    text-align: left;
+    margin-top: -1px;
+    position: absolute;
+}
+
+.NavBar-DropDown-item {
+    display: none;
+    margin: 0px 5px;
 }

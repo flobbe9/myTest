@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "./NavBar.css";
 import { setBackgroundColorOfClass, setDisplayOfClass } from "./NavBarEvents.tsx";
+import DropDown from "./DropDown.tsx";
 
 
-const navBarElementClass = document.getElementsByClassName("NavBar-element");
-const navBarDropDownClass = document.getElementsByClassName("NavBarDropDown");
+const navBarItemClass = document.getElementsByClassName("NavBar-item");
+const navBarDropDownItemClass = document.getElementsByClassName("NavBar-DropDown-item");
 
 
 export default function NavBar(props) {
@@ -13,22 +14,39 @@ export default function NavBar(props) {
         // add event listeners
         addEventListeners();
     });
-
     
     return ( 
-        <nav className="NavBar">
-            <ul className="NavBar-elements">
-                <li className="NavBar-element">
+        <div>
+            <nav className="NavBar">
+                <ul className="NavBar-container">
+                    <li className="NavBar-item">
                     Home
+                    </li>
+
+                    <li className="NavBar-item">
+                        About
+                    </li>
+
+                    <li className="NavBar-item">
+                        Career
+                    </li>
+                </ul>
+            </nav>
+
+            <ul className="NavBar-DropDown-container">
+                <li className="NavBar-DropDown-item">
+                    <DropDown />
                 </li>
-                <li id="NavBar-element-about" className="NavBar-element">
-                    About
+
+                <li className="NavBar-DropDown-item">
+                    <DropDown />
                 </li>
-                <li id="NavBar-element-career" className="NavBar-element">
-                    Career
+
+                <li className="NavBar-DropDown-item">
+                    <DropDown />
                 </li>
             </ul>
-        </nav>
+        </div>
     )
 }
 
@@ -36,10 +54,13 @@ export default function NavBar(props) {
 function addEventListeners() {
     
     // NavBar-element change color 
-    setBackgroundColorOfClass(navBarElementClass, "mouseover", "white");
-    setBackgroundColorOfClass(navBarElementClass, "mouseout", "bisque");
+    setBackgroundColorOfClass(navBarItemClass, "mouseover", "white");
+    setBackgroundColorOfClass(navBarItemClass, "mouseout", "bisque");
 
     // NavBarDropDown display
-    setDisplayOfClass(navBarElementClass, "mouseover", "inline", navBarDropDownClass);
-    setDisplayOfClass(navBarElementClass, "mouseout", "none", navBarDropDownClass);
+    setDisplayOfClass(navBarItemClass, "mouseover", "inline-flex", navBarDropDownItemClass);
+    setDisplayOfClass(navBarItemClass, "mouseout", "none", navBarDropDownItemClass);
+    
+    setDisplayOfClass(navBarDropDownItemClass, "mouseover", "inline-flex", navBarDropDownItemClass);
+    setDisplayOfClass(navBarDropDownItemClass, "mouseout", "none", navBarDropDownItemClass);
 }
