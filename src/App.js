@@ -1,30 +1,28 @@
 import './App.css';
 import NavBar from './navbar/NavBar.tsx';
-
-
-const navBarDropDown = document.getElementsByClassName("NavBarDropDownn");
-const navBar = document.getElementsByClassName("NavBarr");
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './home-page/Home.tsx';
 
 function App() {
 
     return (
-		<div className="App">
+		<BrowserRouter className="App">
 			<header>
 				<NavBar className="NavBarr" />
-				{/* <NavBarDropDown className="NavBarDropDownn" />
-				<NavBarDropDown className="NavBarDropDownn" />
-				<NavBarDropDown className="NavBarDropDownn" /> */}
 			</header>
-
-			<body className="Body">
-				<h1>Body</h1>
+			
+			<body>
+				<Routes>
+					<Route path="/contact" element={<h1>Contact</h1>} />
+					<Route path="/jobs" element={<h1>Jobs</h1>} />
+					<Route path="/home" element={<Home />} />
+				</Routes>
 			</body>
 
 			<footer>
 				Footer
 			</footer>
-		</div>
+		</BrowserRouter>
   	);
 }
 

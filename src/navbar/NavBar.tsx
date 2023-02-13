@@ -14,13 +14,13 @@ export default function NavBar(props) {
         // add event listeners
         addEventListeners();
     });
-    
+
     return ( 
-        <div>
+        <div> 
             <nav className="NavBar">
                 <ul className="NavBar-container">
                     <li className="NavBar-item">
-                    Home
+                        Home
                     </li>
 
                     <li className="NavBar-item">
@@ -30,6 +30,8 @@ export default function NavBar(props) {
                     <li className="NavBar-item">
                         Career
                     </li>
+
+                   
                 </ul>
             </nav>
 
